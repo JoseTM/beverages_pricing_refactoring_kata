@@ -1,5 +1,6 @@
 package beverages;
 
 public interface Beverage {
-    double price();
+     double getPrice();
+     String serveBevereage();
 }
