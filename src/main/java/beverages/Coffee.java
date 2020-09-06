@@ -1,6 +1,8 @@
 package beverages;
 
-public class Coffee implements Beverage {
+import beverages.interfaces.IBeverage;
+
+public class Coffee implements IBeverage {
     @Override
     public double price() {
         return 1.2;

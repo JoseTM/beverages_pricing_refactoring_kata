@@ -1,9 +1,11 @@
 package beverages;
 
+import beverages.interfaces.IBeverage;
+
 public class TeaBuilder {
 	private boolean withMilk = false;
 	private boolean withCinammon = false;
-	private Beverage beverage;
+	private IBeverage beverage;
 	
 	public TeaBuilder() {
 		this.beverage = new Tea();
@@ -19,7 +21,7 @@ public class TeaBuilder {
 		return this;
 	}
 	
-	public Beverage make() {
+	public IBeverage make() {
 		if (withMilk) {			
 			beverage = new WithMilk(beverage);
 		}

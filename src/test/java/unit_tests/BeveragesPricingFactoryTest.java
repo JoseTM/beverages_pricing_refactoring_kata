@@ -1,6 +1,9 @@
 package unit_tests;
 
-import beverages.*;
+import beverages.factorias.BeberagesCoffeeConcreteFactory;
+import beverages.factorias.BeberagesHotChocolateConcreteFactory;
+import beverages.factorias.BeberagesTeaConcreteFactory;
+import beverages.interfaces.IBeverage;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -20,21 +23,21 @@ public class BeveragesPricingFactoryTest {
         BeberagesTeaConcreteFactory factory = BeberagesTeaConcreteFactory.newInstance();
         //fallará por la unicidad impuesta en el constructor singleton de la clase abstracta
         //BeberagesAbastractFactory factory2 = BeberagesCoffeeConcreteFactory.newInstance();
-        Beverage tea = factory.createBeverage();
+        IBeverage tea = factory.createBeverage();
         assertThat(tea.price(), is(closeTo(1.50, 0.001)));
     }
     
     @Test
     public void computes_tea_with_cinammon_price() throws IllegalAccessException, InstantiationException {
         BeberagesTeaConcreteFactory factory = BeberagesTeaConcreteFactory.newInstance();
-        Beverage tea = factory.createWithCinammon();
+        IBeverage tea = factory.createWithCinammon();
     	assertThat(tea.price(), is(closeTo(1.55, 0.001)));
     }
 
     @Test
     public void computes_tea_with_milk_price() throws IllegalAccessException, InstantiationException {
         BeberagesTeaConcreteFactory factory = BeberagesTeaConcreteFactory.newInstance();
-        Beverage tea = factory.createWithMilk();
+        IBeverage tea = factory.createWithMilk();
         assertThat(tea.price(), is(closeTo(1.60, 0.001)));
     }
 
@@ -42,35 +45,35 @@ public class BeveragesPricingFactoryTest {
     @Test
     public void computes_coffee_price() throws IllegalAccessException, InstantiationException, InterruptedException {
         BeberagesCoffeeConcreteFactory factory = BeberagesCoffeeConcreteFactory.newInstance();
-        Beverage coffee = factory.createBeverage();
+        IBeverage coffee = factory.createBeverage();
         assertThat(coffee.price(), is(closeTo(1.20, 0.001)));
     }
 
     @Test
     public void computes_coffee_with_milk_price() throws IllegalAccessException, InstantiationException {
         BeberagesCoffeeConcreteFactory factory = BeberagesCoffeeConcreteFactory.newInstance();
-        Beverage coffeeWithMilk = factory.createWithMilk();
+        IBeverage coffeeWithMilk = factory.createWithMilk();
         assertThat(coffeeWithMilk.price(), is(closeTo(1.30, 0.001)));
     }
 
     @Test
     public void computes_coffee_with_milk_and_cream_price() throws IllegalAccessException, InstantiationException {
         BeberagesCoffeeConcreteFactory factory = BeberagesCoffeeConcreteFactory.newInstance();
-        Beverage coffeeWithMilkAndCream = factory.createWithMilkAndCream();
+        IBeverage coffeeWithMilkAndCream = factory.createWithMilkAndCream();
         assertThat(coffeeWithMilkAndCream.price(), is(closeTo(1.45, 0.001)));
     }
 
     @Test
     public void computes_hot_chocolate_price() throws IllegalAccessException, InstantiationException {
         BeberagesHotChocolateConcreteFactory factory = BeberagesHotChocolateConcreteFactory.newInstance();
-        Beverage hotChocolate = factory.createBeverage();
+        IBeverage hotChocolate = factory.createBeverage();
         assertThat(hotChocolate.price(), is(closeTo(1.45, 0.001)));
     }
 
     @Test
     public void computes_hot_chocolate_with_cream_price() throws IllegalAccessException, InstantiationException {
         BeberagesHotChocolateConcreteFactory factory = BeberagesHotChocolateConcreteFactory.newInstance();
-        Beverage hotChocolateWithCream = factory.createWithCream();
+        IBeverage hotChocolateWithCream = factory.createWithCream();
         assertThat(hotChocolateWithCream.price(),  is(closeTo(1.60, 0.001)));
     }
 }

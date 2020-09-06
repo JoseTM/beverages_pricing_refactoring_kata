@@ -1,10 +1,12 @@
 package beverages;
 
-public class WithMilk implements Beverage {
+import beverages.interfaces.IBeverage;
+
+public class WithMilk implements IBeverage {
 	
-	private final Beverage beverage;
+	private final IBeverage beverage;
 	
-	   public WithMilk(Beverage beverage) {
+	   public WithMilk(IBeverage beverage) {
 		   this.beverage = beverage; 
 	   }
 	   @Override

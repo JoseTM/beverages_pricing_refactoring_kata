@@ -1,10 +1,12 @@
 package beverages;
 
-public class WithCinammon implements Beverage {
+import beverages.interfaces.IBeverage;
+
+public class WithCinammon implements IBeverage {
 	
-	private final Beverage beverage;
+	private final IBeverage beverage;
 	
-	public WithCinammon(Beverage beverage) {
+	public WithCinammon(IBeverage beverage) {
 		this.beverage = beverage;
 	}
 

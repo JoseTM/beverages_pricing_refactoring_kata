@@ -1,6 +1,8 @@
-package beverages;
+package beverages.factorias;
 
-import java.util.Objects;
+import beverages.interfaces.IBeverage;
+import beverages.Waiter;
+import beverages.factorias.abstractas.BeberagesAbastractFactory;
 
 public class BeberagesCoffeeConcreteFactory extends BeberagesAbastractFactory {
 
@@ -13,22 +15,22 @@ public class BeberagesCoffeeConcreteFactory extends BeberagesAbastractFactory {
     };
 
     @Override
-    public Beverage createBeverage(){
+    public IBeverage createBeverage(){
         return Waiter.coffee().make();
     }
 
     @Override
-    public Beverage createWithMilk() {
+    public IBeverage createWithMilk() {
         return Waiter.coffee().withMilk().make();
     }
 
     @Override
-    public Beverage createWithCinammon() {
+    public IBeverage createWithCinammon() {
         return Waiter.coffee().withCinammon().make();
     }
 
     @Override
-    public Beverage createWithCream() {
+    public IBeverage createWithCream() {
         return Waiter.coffee().withCream().make();
     }
 
@@ -36,7 +38,7 @@ public class BeberagesCoffeeConcreteFactory extends BeberagesAbastractFactory {
      * Métododo presente solo en la instancia concreta
      * @return
      */
-    public Beverage createWithMilkAndCream(){
+    public IBeverage createWithMilkAndCream(){
         return Waiter.coffee().withMilk().withCream().make();
     };
 
