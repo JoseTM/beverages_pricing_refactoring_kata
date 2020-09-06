@@ -18,7 +18,8 @@ public class BeberagesTeaConcreteFactory extends BeberagesAbastractFactory {
         return _concreteFactory;
     };
 
-    public Beverage createTea(){
+    @Override
+    public Beverage createBeverage(){
         return Waiter.tea().make();
     }
 
