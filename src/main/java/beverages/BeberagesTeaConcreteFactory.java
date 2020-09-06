@@ -6,9 +6,6 @@ public class BeberagesTeaConcreteFactory extends BeberagesAbastractFactory {
 
     private static BeberagesTeaConcreteFactory _concreteFactory;
 
-    protected BeberagesTeaConcreteFactory(){
-
-    };
 
     public static BeberagesTeaConcreteFactory newInstance() throws InstantiationException, IllegalAccessException {
         _concreteFactory = new BeberagesTeaConcreteFactory();

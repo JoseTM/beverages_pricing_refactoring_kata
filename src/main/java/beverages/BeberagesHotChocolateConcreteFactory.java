@@ -6,9 +6,6 @@ public class BeberagesHotChocolateConcreteFactory extends BeberagesAbastractFact
 
     private static BeberagesHotChocolateConcreteFactory _concreteFactory;
 
-    protected BeberagesHotChocolateConcreteFactory(){
-
-    };
 
     public static BeberagesHotChocolateConcreteFactory newInstance() throws InstantiationException, IllegalAccessException {
             _concreteFactory = new BeberagesHotChocolateConcreteFactory() ;

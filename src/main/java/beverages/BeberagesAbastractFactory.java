@@ -7,6 +7,17 @@ public abstract class BeberagesAbastractFactory {
 
     private static Object _beberage;
 
+
+    protected BeberagesAbastractFactory() {
+    }
+
+    /**
+     * La clase abstracta tendrá una implementación singleton
+     * @param beverage
+     * @return
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     */
     protected static Object newInstanceOf(Object beverage) throws IllegalAccessException, InstantiationException {
         if (Objects.isNull(_beberage)) {
             _beberage = beverage.getClass().newInstance();
