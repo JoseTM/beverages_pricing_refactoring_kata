@@ -10,12 +10,9 @@ public class BeberagesHotChocolateConcreteFactory extends BeberagesAbastractFact
 
     };
 
-    public static BeberagesHotChocolateConcreteFactory newInstance(){
-        if (Objects.isNull( _concreteFactory)) {
-
+    public static BeberagesHotChocolateConcreteFactory newInstance() throws InstantiationException, IllegalAccessException {
             _concreteFactory = new BeberagesHotChocolateConcreteFactory() ;
-        }
-        return _concreteFactory;
+        return (BeberagesHotChocolateConcreteFactory)newInstanceOf(_concreteFactory);
     };
 
     @Override

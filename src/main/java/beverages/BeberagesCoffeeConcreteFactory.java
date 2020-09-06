@@ -10,12 +10,9 @@ public class BeberagesCoffeeConcreteFactory extends BeberagesAbastractFactory {
 
     };
 
-    public static BeberagesCoffeeConcreteFactory newInstance(){
-        if (Objects.isNull( _concreteFactory)) {
-
-            _concreteFactory = new BeberagesCoffeeConcreteFactory() ;
-        }
-        return _concreteFactory;
+    public static BeberagesCoffeeConcreteFactory newInstance() throws InstantiationException, IllegalAccessException {
+         _concreteFactory = new BeberagesCoffeeConcreteFactory() ;
+        return (BeberagesCoffeeConcreteFactory) newInstanceOf(_concreteFactory);
     };
 
     @Override
