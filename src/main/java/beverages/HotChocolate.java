@@ -1,8 +1,9 @@
 package beverages;
 
-import beverages.interfaces.IBeverage;
+import beverages.abastractas.Beverage;
 
-public class HotChocolate implements IBeverage {
+public class HotChocolate extends Beverage {
+
     @Override
     public double price() {
         return 1.45;
