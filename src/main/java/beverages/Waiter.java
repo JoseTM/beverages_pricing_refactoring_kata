@@ -11,7 +11,15 @@ public class Waiter {
 	}
 
 	public static HotChocolateBuilder hotChocolate() {
-		
 		return new HotChocolateBuilder();
 	}
+
+	public static FantaBeverageBuilder fanta(){
+		return new FantaBeverageBuilder();
+	}
+
+	public static CokeBeverageBuilder coke(){
+		return new CokeBeverageBuilder();
+	}
+
 }

@@ -8,6 +8,19 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.closeTo;
 
 public class BeveragesPricingTest {
+
+    @Test
+    public void computes_fanta_price() {
+        Beverage coffee = Waiter.fanta().make();
+        assertThat(coffee.price(), is(closeTo(1.75, 0.001)));
+    }
+
+    @Test
+    public void computes_coke_price() {
+        Beverage coffee = Waiter.coke().make();
+        assertThat(coffee.price(), is(closeTo(1.50, 0.001)));
+    }
+
     @Test
     public void computes_coffee_price() {
         Beverage coffee = Waiter.coffee().make();
