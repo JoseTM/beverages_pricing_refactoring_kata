@@ -15,6 +15,12 @@ public class BeveragesPricingTest {
     }
 
     @Test
+    public void computes_spanish_coffee_price() {
+        Beverage coffee = Waiter.spanishCoffee().make();
+        assertThat(coffee.price(), is(closeTo(1.20, 0.001)));
+    }
+
+    @Test
     public void computes_tea_price() {
         Beverage tea = Waiter.tea().make();
         assertThat(tea.price(), is(closeTo(1.50, 0.001)));
@@ -45,10 +51,23 @@ public class BeveragesPricingTest {
     }
 
     @Test
+    public void computes_spanish_coffee_with_milk_price() {
+        Beverage coffeeWithMilk = Waiter.spanishCoffee().withMilk().make();
+        assertThat(coffeeWithMilk.price(), is(closeTo(1.30, 0.001)));
+    }
+
+    @Test
     public void computes_coffee_with_milk_and_cream_price() {
         Beverage coffeeWithMilkAndCream = Waiter.coffee().withMilk().withCream().make();
         assertThat(coffeeWithMilkAndCream.price(), is(closeTo(1.45, 0.001)));
     }
+
+    @Test
+    public void computes_spanish_coffee_with_milk_and_cream_price() {
+        Beverage coffeeWithMilkAndCream = Waiter.spanishCoffee().withMilk().withCream().make();
+        assertThat(coffeeWithMilkAndCream.price(), is(closeTo(1.45, 0.001)));
+    }
+
 
     @Test
     public void computes_hot_chocolate_with_cream_price() {

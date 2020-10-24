@@ -10,6 +10,10 @@ public class Waiter {
 		return new CoffeeBuilder();
 	}
 
+	public static SpanishCoffeeBuilder spanishCoffee() {
+		return new SpanishCoffeeBuilder();
+	}
+
 	public static HotChocolateBuilder hotChocolate() {
 		
 		return new HotChocolateBuilder();
