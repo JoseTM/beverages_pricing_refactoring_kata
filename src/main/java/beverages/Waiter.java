@@ -14,12 +14,8 @@ public class Waiter {
 		return new HotChocolateBuilder();
 	}
 
-	public static FantaBeverageBuilder fanta(){
-		return new FantaBeverageBuilder();
-	}
-
-	public static CokeBeverageBuilder coke(){
-		return new CokeBeverageBuilder();
+	public static CakeBuilder cake(Beverage beverage){
+		return new CakeBuilder(beverage);
 	}
 
 }
