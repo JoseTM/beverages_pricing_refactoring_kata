@@ -12,8 +12,8 @@ public class BeveragesPricingTest {
     @Test
     public void computes_desert_price() {
         Beverage coffee = Waiter.coffee().make();
-        Desert cake = Waiter.cake().make(coffee);
-        assertThat(cake.price(), is(closeTo(2.70, 0.001)));
+        Desert cake = Waiter.cake(coffee).make();
+        assertThat(cake.price(), is(closeTo(3.70, 0.001)));
     }
 
     @Test
