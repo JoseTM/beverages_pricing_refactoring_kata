@@ -1,9 +1,9 @@
 package beverages;
 
-import beverages.interfaces.IBeverage;
+import beverages.interfaces.Beverage;
 
 public class HotChocolateBuilder {
-	private IBeverage beverage;
+	private Beverage beverage;
 	private boolean withCream = false; 
 	private boolean withCinammon = false;
 	
@@ -23,7 +23,7 @@ public class HotChocolateBuilder {
     	
     }
     
-    public final IBeverage make() {
+    public final Beverage make() {
     	
     	if (withCream)
     		this.beverage = new WithCream(beverage);

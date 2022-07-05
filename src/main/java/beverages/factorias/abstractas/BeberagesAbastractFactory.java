@@ -1,7 +1,7 @@
 package beverages.factorias.abstractas;
 
 
-import beverages.interfaces.IBeverage;
+import beverages.interfaces.Beverage;
 
 import java.util.Objects;
 
@@ -29,11 +29,11 @@ public abstract class BeberagesAbastractFactory {
     };
 
 
-    public abstract IBeverage createBeverage();
+    public abstract Beverage createBeverage();
 
-    public abstract IBeverage createWithMilk();
-    public abstract IBeverage createWithCinammon();
-    public abstract IBeverage createWithCream();
+    public abstract Beverage createWithMilk();
+    public abstract Beverage createWithCinammon();
+    public abstract Beverage createWithCream();
 
 
 

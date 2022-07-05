@@ -1,10 +1,10 @@
 package beverages;
 
-import beverages.interfaces.IBeverage;
+import beverages.interfaces.Beverage;
 
 public class CoffeeBuilder {
 
-	private IBeverage beverage;
+	private Beverage beverage;
 	private boolean withMilk = false;
 	private boolean withCream = false;
 	private boolean withCinammon = false;
@@ -25,7 +25,7 @@ public class CoffeeBuilder {
 		withCinammon = true;
 		return this;
 	}
-	public final IBeverage make() {
+	public final Beverage make() {
 		if(withMilk) {
 			beverage = new WithMilk(beverage);
 		}

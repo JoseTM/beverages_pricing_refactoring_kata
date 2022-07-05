@@ -1,6 +1,6 @@
 package beverages.factorias;
 
-import beverages.interfaces.IBeverage;
+import beverages.interfaces.Beverage;
 import beverages.Waiter;
 import beverages.factorias.abstractas.BeberagesAbastractFactory;
 
@@ -15,22 +15,22 @@ public class BeberagesTeaConcreteFactory extends BeberagesAbastractFactory {
     };
 
     @Override
-    public IBeverage createBeverage(){
+    public Beverage createBeverage(){
         return Waiter.tea().make();
     }
 
     @Override
-    public IBeverage createWithMilk() {
+    public Beverage createWithMilk() {
         return Waiter.tea().withMilk().make();
     }
 
     @Override
-    public IBeverage createWithCinammon() {
+    public Beverage createWithCinammon() {
         return Waiter.tea().withCinammon().make();
     }
 
     @Override
-    public IBeverage createWithCream() {
+    public Beverage createWithCream() {
         return null;
     }
 
