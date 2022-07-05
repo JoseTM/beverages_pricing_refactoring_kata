@@ -1,4 +1,8 @@
-package beverages;
+package beverages.facades;
+
+import beverages.services.CoffeeBuilder;
+import beverages.services.HotChocolateBuilder;
+import beverages.services.TeaBuilder;
 
 public class Waiter {
 
@@ -11,7 +15,6 @@ public class Waiter {
 	}
 
 	public static HotChocolateBuilder hotChocolate() {
-		
 		return new HotChocolateBuilder();
 	}
 }

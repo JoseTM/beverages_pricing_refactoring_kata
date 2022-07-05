@@ -1,4 +1,6 @@
-package beverages;
+package beverages.model;
+
+import beverages.model.Beverage;
 
 public class WithCinammon implements Beverage {
 	

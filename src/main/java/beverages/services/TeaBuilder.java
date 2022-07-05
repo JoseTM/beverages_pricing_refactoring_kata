@@ -1,4 +1,9 @@
-package beverages;
+package beverages.services;
+
+import beverages.model.Beverage;
+import beverages.model.Tea;
+import beverages.model.WithCinammon;
+import beverages.model.WithMilk;
 
 public class TeaBuilder {
 	private boolean withMilk = false;

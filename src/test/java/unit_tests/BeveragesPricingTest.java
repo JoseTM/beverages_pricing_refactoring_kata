@@ -1,6 +1,7 @@
 package unit_tests;
 
-import beverages.*;
+import beverages.facades.Waiter;
+import beverages.model.Beverage;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

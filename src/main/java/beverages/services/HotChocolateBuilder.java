@@ -1,4 +1,9 @@
-package beverages;
+package beverages.services;
+
+import beverages.model.Beverage;
+import beverages.model.HotChocolate;
+import beverages.model.WithCinammon;
+import beverages.model.WithCream;
 
 public class HotChocolateBuilder {
 	private Beverage beverage;

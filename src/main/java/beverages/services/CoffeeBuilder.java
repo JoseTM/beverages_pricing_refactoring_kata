@@ -1,4 +1,6 @@
-package beverages;
+package beverages.services;
+
+import beverages.model.*;
 
 public class CoffeeBuilder {
 
