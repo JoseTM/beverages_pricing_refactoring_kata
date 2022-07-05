@@ -1,9 +1,9 @@
 package beverages;
 
-public class HotChocolateWithCream extends BeveragesWith {
+public class HotChocolateWithCinammon extends BeveragesWith {
     @Override
     public double price() {
         HotChocolate hotChocolate = new HotChocolate();
-        return hotChocolate.price() + withCream();
+        return hotChocolate.price() + withCinnamon();
     }
 }

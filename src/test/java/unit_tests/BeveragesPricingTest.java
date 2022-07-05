@@ -10,49 +10,49 @@ import static org.hamcrest.Matchers.closeTo;
 public class BeveragesPricingTest {
     @Test
     public void computes_coffee_price() {
-        Beverage coffee = Waiter.coffee().make();
+        Beverage coffee = new Coffee();
         assertThat(coffee.price(), is(closeTo(1.20, 0.001)));
     }
 
     @Test
     public void computes_tea_price() {
-        Beverage tea = Waiter.tea().make();
+        Beverage tea = new Tea();
         assertThat(tea.price(), is(closeTo(1.50, 0.001)));
     }
     
     @Test
     public void computes_tea_with_cinammon_price() {
-    	Beverage tea = Waiter.tea().withCinammon().make();
+    	Beverage tea = new TeaWithCinnamon();
     	assertThat(tea.price(), is(closeTo(1.55, 0.001)));
     }
 
     @Test
     public void computes_hot_chocolate_price() {
-        Beverage hotChocolate = Waiter.hotChocolate().make();
+        Beverage hotChocolate = new HotChocolate();
         assertThat(hotChocolate.price(), is(closeTo(1.45, 0.001)));
     }
 
     @Test
     public void computes_tea_with_milk_price() {
-        Beverage teaWithMilk = Waiter.tea().withMilk().make();
+        Beverage teaWithMilk = new TeaWithMilk();
         assertThat(teaWithMilk.price(), is(closeTo(1.60, 0.001)));
     }
 
     @Test
     public void computes_coffee_with_milk_price() {
-        Beverage coffeeWithMilk = Waiter.coffee().withMilk().make();
+        Beverage coffeeWithMilk = new CoffeeWithMilk();
         assertThat(coffeeWithMilk.price(), is(closeTo(1.30, 0.001)));
     }
 
     @Test
     public void computes_coffee_with_milk_and_cream_price() {
-        Beverage coffeeWithMilkAndCream = Waiter.coffee().withMilk().withCream().make();
+        Beverage coffeeWithMilkAndCream = new CoffeeWithMilkAndCream();
         assertThat(coffeeWithMilkAndCream.price(), is(closeTo(1.45, 0.001)));
     }
 
     @Test
     public void computes_hot_chocolate_with_cream_price() {
-        Beverage hotChocolateWithCream = Waiter.hotChocolate().withCream().make();
+        Beverage hotChocolateWithCream = new HotChocolateWithCream();
         assertThat(hotChocolateWithCream.price(),  is(closeTo(1.60, 0.001)));
     }
 }

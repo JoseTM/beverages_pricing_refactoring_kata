@@ -1,8 +1,11 @@
 package beverages;
 
-public class CoffeeWithMilk extends Coffee {
+public class CoffeeWithMilk extends BeveragesWith {
+
     @Override
     public double price() {
-        return super.price() +  0.10;
+        Coffee coffee = new Coffee();
+
+        return coffee.price() + withMilk();
     }
 }
