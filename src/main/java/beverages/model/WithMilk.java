@@ -1,4 +1,4 @@
-package beverages;
+package beverages.model;
 
 public class WithMilk implements Beverage {
 	

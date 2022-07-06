@@ -1,4 +1,4 @@
-package beverages;
+package beverages.model;
 
 public class HotChocolate implements Beverage {
     @Override
