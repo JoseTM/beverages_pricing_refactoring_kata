@@ -3,12 +3,16 @@ package beverages.factorias.abstractas;
 
 import beverages.interfaces.Beverage;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 
 public abstract class BeberagesAbastractFactory {
 
     private static Object _beberage;
+    protected static Map<String, String> beberages = new HashMap<>();
 
 
     protected BeberagesAbastractFactory() {

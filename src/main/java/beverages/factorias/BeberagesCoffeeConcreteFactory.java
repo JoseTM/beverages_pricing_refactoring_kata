@@ -16,6 +16,7 @@ public class BeberagesCoffeeConcreteFactory extends BeberagesAbastractFactory {
 
     @Override
     public Beverage createBeverage(){
+        beberages.put("coffee", "coffee");
         return Waiter.coffee().make();
     }
 
