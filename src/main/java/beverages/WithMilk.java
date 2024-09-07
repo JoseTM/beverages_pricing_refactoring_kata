@@ -13,4 +13,9 @@ public class WithMilk implements Beverage {
 	    public double price() {
 	        return beverage.price() +  0.10;
 	   }
+
+	@Override
+	public String getType() {
+		return "";
+	}
 }

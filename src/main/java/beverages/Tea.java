@@ -7,4 +7,9 @@ public class Tea implements Beverage {
     public double price() {
         return 1.5;
     }
+
+    @Override
+    public String getType() {
+        return "Tea";
+    }
 }

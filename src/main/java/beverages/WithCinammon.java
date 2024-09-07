@@ -15,4 +15,9 @@ public class WithCinammon implements Beverage {
 		return beverage.price() + 0.05;
 	}
 
+	@Override
+	public String getType() {
+		return "";
+	}
+
 }

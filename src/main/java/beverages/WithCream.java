@@ -16,4 +16,9 @@ public class WithCream implements Beverage {
 		return beverage.price() + 0.15;
 	}
 
+	@Override
+	public String getType() {
+		return "";
+	}
+
 }
